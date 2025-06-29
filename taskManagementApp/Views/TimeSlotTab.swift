@@ -17,11 +17,11 @@ struct TimeSlotTab: View {
             VStack(spacing: 8) {
                 Image(systemName: timeSlot.icon)
                     .font(.title2)
-                    .foregroundColor(isSelected ? .white : timeSlot.color)
+                    .foregroundStyle(isSelected ? .white : timeSlot.color)
                 
                 Text(timeSlot.rawValue)
                     .font(.caption)
-                    .foregroundColor(isSelected ? .white : .primary)
+                    .foregroundStyle(isSelected ? .white : .primary)
             }
             .padding(.vertical, 12)
             .padding(.horizontal, 16)

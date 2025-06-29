@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-// MARK: - タスク追加ビュー
+
+
 struct AddTaskView: View {
     let timeSlot: TimeSlot
     @ObservedObject var taskManager: TaskManager
@@ -58,4 +59,11 @@ struct AddTaskView: View {
             }
         }
     }
+}
+#Preview {
+    AddTaskView(
+        timeSlot: .morning,
+        taskManager: TaskManager(),
+        isPresented: .constant(true)
+    )
 }

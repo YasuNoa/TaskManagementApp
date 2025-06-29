@@ -14,16 +14,17 @@ struct EmptyStateView: View {
         VStack(spacing: 16) {
             Image(systemName: timeSlot.icon)
                 .font(.system(size: 50))
-                .foregroundColor(timeSlot.color.opacity(0.5))
+                .foregroundStyle(timeSlot.color.opacity(0.5))
             
             Text("\(timeSlot.rawValue)のタスクがありません")
                 .font(.headline)
-                .foregroundColor(.secondary)
+                .foregroundStyle(.secondary)
             
             Text("右上の + ボタンでタスクを追加してください")
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundStyle(.secondary)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
+

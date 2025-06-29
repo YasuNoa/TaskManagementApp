@@ -11,13 +11,14 @@ struct TaskListView: View {
     let timeSlot: TimeSlot
     @ObservedObject var taskManager: TaskManager
     
+    
+    
     var tasks: [Task] {
-        taskManager.tasks[timeSlot] ?? []
+        taskManager.tasksForSelectedDate(in: timeSlot)
     }
     
     var body: some View {
         VStack {
-            // 進捗表示
             ProgressView(value: taskManager.getCompletionRate(for: timeSlot))
                 .progressViewStyle(LinearProgressViewStyle(tint: timeSlot.color))
                 .padding()
@@ -46,4 +47,7 @@ struct TaskListView: View {
             }
         }
     }
+}
+#Preview {
+    TaskListView(timeSlot: .morning, taskManager: TaskManager())
 }

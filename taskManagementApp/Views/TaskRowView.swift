@@ -4,8 +4,6 @@
 //
 //  Created by 田中正造 on 08/06/2025.
 //
-
-
 import SwiftUI
 struct TaskRowView: View {
     let task: Task
@@ -13,23 +11,33 @@ struct TaskRowView: View {
     @ObservedObject var taskManager: TaskManager
     
     var body: some View {
-        HStack {
-            Button(action: {
-                taskManager.toggleTask(in: timeSlot, taskId: task.id)
-            }) {
+        Button(action: {
+            taskManager.toggleTask(in: timeSlot, taskId: task.id)
+        }) {
+            HStack {
                 Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
-                    .foregroundColor(task.isCompleted ? timeSlot.color : .gray)
+                    .foregroundStyle(task.isCompleted ? timeSlot.color : .gray)
                     .font(.title2)
+                Text(task.title)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .strikethrough(task.isCompleted)
+                    .foregroundStyle(task.isCompleted ? .secondary : .primary)
             }
-            .buttonStyle(PlainButtonStyle())
-            
-            Text(task.title)
-                .strikethrough(task.isCompleted)
-                .foregroundColor(task.isCompleted ? .secondary : .primary)
-            
-            Spacer()
+            .contentShape(Rectangle())
         }
+        .buttonStyle(.plain)
         .padding(.vertical, 4)
     }
 }
 
+#Preview {
+    let previewTask = Task(title: "aa", isCompleted: false)
+    let previewTimeSlot = TimeSlot.morning
+    let previewTaskManager = TaskManager()
+    
+    TaskRowView(
+        task: previewTask,
+        timeSlot: previewTimeSlot,
+        taskManager: previewTaskManager
+    )
+}

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF7F7DBD2DF59A770094E651 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7DB22DF59A770094E651 /* AddTaskView.swift */; };
-		BF7F7DBE2DF59A770094E651 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7DB42DF59A770094E651 /* ContentView.swift */; };
+		BF7F7DBE2DF59A770094E651 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7DB42DF59A770094E651 /* MainView.swift */; };
 		BF7F7DBF2DF59A770094E651 /* dataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7DB52DF59A770094E651 /* dataModel.swift */; };
 		BF7F7DC02DF59A770094E651 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7DB62DF59A770094E651 /* EmptyStateView.swift */; };
 		BF7F7DC12DF59A770094E651 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7DB72DF59A770094E651 /* TaskListView.swift */; };
@@ -17,13 +17,15 @@
 		BF7F7DC42DF59A770094E651 /* TimeSlotTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7DBA2DF59A770094E651 /* TimeSlotTab.swift */; };
 		BF7F7DC52DF59A770094E651 /* TimeSlotTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7DBB2DF59A770094E651 /* TimeSlotTabView.swift */; };
 		BF7F7DC62DF59A770094E651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7F7DB32DF59A770094E651 /* Assets.xcassets */; };
+		BF7F7DCA2DFBF4A00094E651 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F7DC92DFBF4A00094E651 /* TaskManager.swift */; };
+		BFE65C9C2E110097007B901F /* ToggleDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE65C9B2E110097007B901F /* ToggleDayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF300E182DE2126D003AE13C /* taskManagementApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taskManagementApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7F7DB22DF59A770094E651 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		BF7F7DB32DF59A770094E651 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BF7F7DB42DF59A770094E651 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BF7F7DB42DF59A770094E651 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		BF7F7DB52DF59A770094E651 /* dataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataModel.swift; sourceTree = "<group>"; };
 		BF7F7DB62DF59A770094E651 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		BF7F7DB72DF59A770094E651 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
@@ -31,6 +33,8 @@
 		BF7F7DB92DF59A770094E651 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
 		BF7F7DBA2DF59A770094E651 /* TimeSlotTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSlotTab.swift; sourceTree = "<group>"; };
 		BF7F7DBB2DF59A770094E651 /* TimeSlotTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSlotTabView.swift; sourceTree = "<group>"; };
+		BF7F7DC92DFBF4A00094E651 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		BFE65C9B2E110097007B901F /* ToggleDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleDayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +67,9 @@
 		BF7F7DBC2DF59A770094E651 /* taskManagementApp */ = {
 			isa = PBXGroup;
 			children = (
-				BF7F7DB42DF59A770094E651 /* ContentView.swift */,
+				BF7F7DC82DFBF4600094E651 /* models */,
 				BF7F7DC72DF59A7B0094E651 /* Views */,
 				BF7F7DB32DF59A770094E651 /* Assets.xcassets */,
-				BF7F7DB52DF59A770094E651 /* dataModel.swift */,
 				BF7F7DB82DF59A770094E651 /* taskManagementAppApp.swift */,
 			);
 			path = taskManagementApp;
@@ -75,6 +78,8 @@
 		BF7F7DC72DF59A7B0094E651 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF7F7DB42DF59A770094E651 /* MainView.swift */,
+				BFE65C9B2E110097007B901F /* ToggleDayView.swift */,
 				BF7F7DB92DF59A770094E651 /* TaskRowView.swift */,
 				BF7F7DB62DF59A770094E651 /* EmptyStateView.swift */,
 				BF7F7DB72DF59A770094E651 /* TaskListView.swift */,
@@ -83,6 +88,15 @@
 				BF7F7DBA2DF59A770094E651 /* TimeSlotTab.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BF7F7DC82DFBF4600094E651 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				BF7F7DC92DFBF4A00094E651 /* TaskManager.swift */,
+				BF7F7DB52DF59A770094E651 /* dataModel.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,12 +172,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7F7DBD2DF59A770094E651 /* AddTaskView.swift in Sources */,
-				BF7F7DBE2DF59A770094E651 /* ContentView.swift in Sources */,
+				BF7F7DBE2DF59A770094E651 /* MainView.swift in Sources */,
+				BF7F7DCA2DFBF4A00094E651 /* TaskManager.swift in Sources */,
 				BF7F7DBF2DF59A770094E651 /* dataModel.swift in Sources */,
 				BF7F7DC02DF59A770094E651 /* EmptyStateView.swift in Sources */,
 				BF7F7DC12DF59A770094E651 /* TaskListView.swift in Sources */,
 				BF7F7DC22DF59A770094E651 /* taskManagementAppApp.swift in Sources */,
 				BF7F7DC32DF59A770094E651 /* TaskRowView.swift in Sources */,
+				BFE65C9C2E110097007B901F /* ToggleDayView.swift in Sources */,
 				BF7F7DC42DF59A770094E651 /* TimeSlotTab.swift in Sources */,
 				BF7F7DC52DF59A770094E651 /* TimeSlotTabView.swift in Sources */,
 			);
@@ -313,7 +329,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yasu.taskManagementApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yasu.taskManagementApp326;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -341,7 +357,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yasu.taskManagementApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yasu.taskManagementApp326;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

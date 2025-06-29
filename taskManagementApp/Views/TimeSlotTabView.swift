@@ -23,6 +23,7 @@ struct TimeSlotTabView: View {
             }
             .padding(.horizontal)
         }
+        .scaledToFit()
         .background(.regularMaterial)
     }
 }
