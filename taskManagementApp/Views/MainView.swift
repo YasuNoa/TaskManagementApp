@@ -89,7 +89,7 @@ struct MainView: View {
     @ViewBuilder
     private var taskListView:some View {
         let tasks =
-            taskManager.tasksForSelectedDate(in: selectedTimeSlot)
+        taskManager.tasksForSelectedDate(in: selectedTimeSlot)
         
         VStack {
             ProgressView(value: taskManager.getCompletionRate(for: selectedTimeSlot))
@@ -144,7 +144,6 @@ struct MainView: View {
         }
         .buttonStyle(PlainButtonStyle())
     }
-        
 }
 
 #Preview {
