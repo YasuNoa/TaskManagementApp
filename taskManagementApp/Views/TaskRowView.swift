@@ -41,3 +41,4 @@ struct TaskRowView: View {
         taskManager: previewTaskManager
     )
 }
+

@@ -59,6 +59,7 @@ struct MainView: View {
                     .font(.title2)
             }
             Spacer()
+            
             Text(dateFormatter.string(from:taskManager.selectedDate))
                 .font(.headline)
             Spacer()
